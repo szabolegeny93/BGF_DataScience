@@ -1,0 +1,3 @@
+FirstName   LastName    (SELECT total FROM Invoice ORDER BY total DESC)
+----------  ----------  -----------------------------------------------
+Luís       Gonçalves  25.86                                          
