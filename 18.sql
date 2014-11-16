@@ -1,0 +1,3 @@
+.mode column
+.headers on
+SELECT a.Name, x.Title, t.Name, g.Name, m.Name, i.UnitPrice FROM Artist a JOIN Album x on a.ArtistId=x.ArtistId JOIN Track t on t.AlbumId=x.AlbumId LEFT JOIN InvoiceLine i on i.TrackId=t.TrackId JOIN Genre g on g.GenreId=t.Genreid JOIN MediaType m on m.MediaTypeId=t.MediaTypeId WHERE i.InvoiceId IS NULL AND x.Title IN('Frank','Revelations') GROUP BY a.Name, x.Title, t.Name, g.Name, m.Name,t.UnitPrice ORDER BY a.Name DESC;
